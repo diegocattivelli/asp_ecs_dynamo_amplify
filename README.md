@@ -1,7 +1,3 @@
----
-type: Note
-belongs_to: "[[ort]]"
----
 # Ejemplo ecs + dynamo + amplify
 
 ## Proyecto de ejemplo: "Encuesta Rápida" (Poll App)
