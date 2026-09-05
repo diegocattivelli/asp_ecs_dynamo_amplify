@@ -154,14 +154,14 @@ ENTRYPOINT ["./server"]
 
 ```shellscript
   aws ecr get-login-password --region us-east-1 \
-     | docker login --username AWS --password-stdin 857344665088.dkr.ecr.us-east-1.amazonaws.com
+     | docker login --username AWS --password-stdin 400854066480.dkr.ecr.us-east-1.amazonaws.com
 
 docker buildx build --platform linux/amd64 -t poll-backend . --load
 
 docker tag poll-backend:latest \
-     857344665088.dkr.ecr.us-east-1.amazonaws.com/poll-backend:latest
+     400854066480.dkr.ecr.us-east-1.amazonaws.com/poll-backend:latest
 
-docker push 857344665088.dkr.ecr.us-east-1.amazonaws.com/poll-backend:latest
+docker push 400854066480.dkr.ecr.us-east-1.amazonaws.com/poll-backend:latest
 ```
 
 
@@ -221,7 +221,7 @@ Create.
 
 
 ```shellscript
-   curl http://poll-alb-123456.us-east-1.elb.amazonaws.com/api/poll
+   curl http://poll-alb-1377817395.us-east-1.elb.amazonaws.com/api/poll
 ```
 
 

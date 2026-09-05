@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Encuesta rápida</h1>
+
+  @if (loading()) {
+    <div aria-live="polite">Cargando...</div>
+  }
+
+  @if (errorMessage()) {
+    <div class="error" role="alert">{{ errorMessage() }}</div>
+  }
+
+  @if (poll(); as poll) {
+    <h2>{{ poll.question }}</h2>
+
+    @for (option of poll.options; track option.id) {
+      <div class="option">
+        <button (click)="vote(option.id)">{{ option.text }}</button>
+        <div class="bar-bg">
+          <div class="bar-fill" [style.width.%]="percentage(option.votes)"></div>
+        </div>
+        <span>{{ option.votes }} votos ({{ percentage(option.votes) }}%)</span>
+      </div>
+    }
+
+    <button class="reset" (click)="reset()">Reiniciar encuesta</button>
+  }
+</div>

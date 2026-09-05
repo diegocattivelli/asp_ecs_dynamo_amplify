@@ -1,0 +1,32 @@
+.container {
+  max-width: 480px;
+  margin: 40px auto;
+  font-family: sans-serif;
+  text-align: center;
+}
+.option {
+  margin: 12px 0;
+  text-align: left;
+}
+.bar-bg {
+  background: #eee;
+  border-radius: 4px;
+  height: 8px;
+  margin: 4px 0;
+}
+.bar-fill {
+  background: #3f51b5;
+  height: 8px;
+  border-radius: 4px;
+}
+.reset {
+  margin-top: 20px;
+  background: #ccc;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.error {
+  color: red;
+}
