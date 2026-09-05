@@ -1,4 +1,4 @@
 export const environment = {
-  production: false,
-  apiUrl: 'http://localhost:8080'
+  production: true,
+  apiUrl: 'https://poll-alb-1377817395.us-east-1.elb.amazonaws.com'
 };
